@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function $$ (id) {
+				return document.getElementById(id);
+			}
+			window.onload = function () {
+				var cnv = $$("canvas");
+				var cxt = cnv.getContext("2d")
+				cxt.beginPath();
+				cxt.arc(100, 100, 50, 0,180*Math.PI/180, true);
+				cxt.closePath();
+				cxt.strokeStyle = "hotpink";
+				cxt.stroke();
+				cxt.beginPath();
+				cxt.arc(200, 200, 50, 0, 360*Math.PI/180, false);
+				cxt.closePath();
+				cxt.strokeStyle = "yellow";
+				cxt.stroke();
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="300" style="border: 5px dashed blue;"></canvas>
+	</body>
+</html>
